@@ -1,0 +1,26 @@
+
+# BEGIN WordPress
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{HTTPS}        =off   [OR]
+RewriteCond %{HTTP_HOST}    !^stage.scrumteam\.pro$
+RewriteRule ^(.*)$          "https://stage.scrumteam.pro/$1" [R=301,L]
+
+# remaining htaccess mod_rewrite CODE for WordPress
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+
+# END WordPress
+RemoveHandler .php # phpvs v56
+AddType php56cgi .php # phpvs v56
