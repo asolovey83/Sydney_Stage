@@ -451,7 +451,7 @@ Repeatable Patterns
 	.footer-widgets .widget ul,
 	.widget-area .widget ul {
 		list-style: none;
-		padding: 0;
+		padding: 0;        
 	}
 	.widget .children {
 		padding-left: 15px;
@@ -1733,7 +1733,7 @@ Footer
 --------------------------------------------------------------*/
 	.footer-widgets {
 		padding: 95px 0;
-		background-color: #252525;
+		background-color: #252525;        
 	}
 	.footer .copyr {
 		color: #a8a8a8;
@@ -3619,3 +3619,9 @@ div[class*="elementor-widget-wp-widget-sydney"] h5 {
 	.sydney-hero-area {
 		overflow: hidden;
 	}
+
+div.postfooter-widget{
+    width:150px;
+}
+
+
