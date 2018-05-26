@@ -98,6 +98,17 @@ function sydney_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+    
+    //Post footer sidebar
+    register_sidebar( array(
+        'name'          => 'Post Footer',
+        'id'            => 'postfooter',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div> <!-- end .widget -->',
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+    ) ); 
+
 
 	//Footer widget areas
 	$widget_areas = get_theme_mod('footer_widget_areas', '3');
@@ -111,6 +122,8 @@ function sydney_widgets_init() {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		) );
+         
+        
 	}
 
 	//Register the front page widgets
@@ -400,6 +413,8 @@ require_once dirname( __FILE__ ) . '/demo-content/setup.php';
 require_once dirname( __FILE__ ) . '/plugins/class-tgm-plugin-activation.php';
 
 add_action( 'tgmpa_register', 'sydney_recommend_plugin' );
+
+
 function sydney_recommend_plugin() {
 
     $plugins[] = array(
@@ -419,6 +434,7 @@ function sydney_recommend_plugin() {
     tgmpa( $plugins);
 
 }
+
 
 /**
  * Admin notice
